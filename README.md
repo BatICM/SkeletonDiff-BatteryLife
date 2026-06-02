@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/BatICM/SkeletonDiff-BatteryLife)](https://github.com/BatICM/SkeletonDiff-BatteryLife/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-This repository implements the battery degradation trajectory prediction algorithm.
+This repository implements the battery degradation trajectory prediction algorithm described in the bachelor thesis: "Battery Degradation Trajectory Prediction Method Based on Generative Diffusion Model".
 
 ## Overview
 
@@ -25,22 +25,25 @@ Our framework consists of four main components:
 3. **Stage 2: Residual Diffusion Training**: Trains the conditional diffusion model to learn the stochastic variations (residuals) on top of the deterministic skeleton.
 4. **Inference & Fusion**: Generates multiple plausible future trajectories and selects the most robust representative curve using a multi-signal EOL fusion strategy.
 
-## 📊 Results
+## 📂 Dataset & Preparation
 
-Tested on a dataset of 124 lithium iron phosphate (LFP) batteries, our generative approach outperforms traditional baselines (such as LSTM and Transformer) in global average indicators including RMSE, MAE, and EOL prediction errors, especially demonstrating superior stability in long-term predictions.
+This project utilizes cycle life data from 124 lithium iron phosphate (LFP) batteries. The original dataset is provided by the following work:
 
-## Citation
+> Severson, K.A., Attia, P.M., Jin, N. et al. Data-driven prediction of battery cycle life before capacity degradation. *Nat Energy* **4**, 383–391 (2019). [https://doi.org/10.1038/s41560-019-0356-8](https://doi.org/10.1038/s41560-019-0356-8)
 
-[To be added]
+Due to GitHub's file size limits, the raw data `.pkl` files are not included in this repository. To reproduce our experiments, please prepare the data by following these steps:
 
-## License
+1. Download the original dataset associated with the paper mentioned above.
+2. Format the data to generate the necessary files (`batch1.pkl`, `batch2.pkl`, `batch3.pkl`).
+3. Place these files into the `data/` directory of this project.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-[To be added]
-
-## Contact
-
-[To be added]
+The expected directory structure should look like this before running any scripts:
+```text
+Battery-Degradation-Prediction/
+├── data/
+│   ├── batch1.pkl
+│   ├── batch2.pkl
+│   └── batch3.pkl
+├── code/
+│   ├── 01_data_processing.py
+│   └── ...
