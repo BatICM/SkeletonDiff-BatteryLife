@@ -1,0 +1,100 @@
+{
+  "seed": 42,
+  "runtime_seed": 82,
+  "feature_sets": {
+    "original_fixed15_old": [
+      "energy_efficiency",
+      "charge_rate",
+      "T_deviation",
+      "IR_ewm",
+      "QD_curvature",
+      "chargetime",
+      "chargetime_ma5",
+      "IR",
+      "IR_ma10",
+      "Trange",
+      "T_amplitude",
+      "chargetime_diff",
+      "chargetime_cumsum",
+      "Tmin",
+      "QD_decay_rate"
+    ],
+    "fixed15_tmax_only": [
+      "energy_efficiency",
+      "charge_rate",
+      "T_deviation",
+      "IR_ewm",
+      "QD_curvature",
+      "chargetime",
+      "chargetime_ma5",
+      "IR",
+      "IR_ma10",
+      "Trange",
+      "Tmax",
+      "chargetime_diff",
+      "chargetime_cumsum",
+      "Tmin",
+      "QD_decay_rate"
+    ],
+    "fixed15_plus_replaced": [
+      "energy_efficiency",
+      "charge_rate",
+      "T_deviation",
+      "IR_ewm",
+      "QD_curvature",
+      "chargetime",
+      "IR",
+      "Trange",
+      "Tmax",
+      "chargetime_diff",
+      "Tmin",
+      "QD_decay_rate",
+      "IR_growth_rate",
+      "Q_diff",
+      "Tavg"
+    ]
+  },
+  "training_params_main": {
+    "det_max_epochs": 240,
+    "diff_max_epochs": 800,
+    "det_min_epochs": 120,
+    "diff_min_epochs": 120,
+    "det_patience": 60,
+    "diff_patience": 60,
+    "classifier_epochs": 100,
+    "batch_size": 16,
+    "lr": 0.0008,
+    "condition_ablation": "full"
+  },
+  "testing_params_main_grid": {
+    "n_runs_max": 20,
+    "ddim_steps": 60,
+    "guidance_scale_candidates": [
+      0.6,
+      0.8,
+      1.0
+    ],
+    "best_for_fixed15_plus": 0.6
+  },
+  "baseline_params": {
+    "epochs": 400,
+    "patience": 80,
+    "batch_size": 32,
+    "lr": 0.0008,
+    "weight_decay": 0.0001,
+    "models": [
+      "lstm",
+      "transformer"
+    ]
+  },
+  "result_files": {
+    "diffusion_old_rt82": "Output/code2_test_predictions_seed42_n10_rt82.pkl",
+    "diffusion_fixed15_tmax": "Output/code2_test_predictions_seed42_n10_fixed15tmax_rt82.pkl",
+    "diffusion_fixed15_plus_best_gs06": "Output/code2_test_predictions_seed42_n10_fixed15tmaxplus_rt82_gs06.pkl",
+    "baseline_lstm_fixed15_plus": "Output/baseline_lstm_test_predictions_seed42.pkl",
+    "baseline_transformer_fixed15_plus": "Output/baseline_transformer_test_predictions_seed42.pkl"
+  },
+  "comparison_table": "Output\\main_baseline_compare_fixed15plus_seed42.csv",
+  "corr_pairs_table": "Output/fixed15_validation/fixed15tmaxplus_corr_pairs_seed42.csv",
+  "corr_pairs_ge095_table": "Output\\fixed15_validation\\fixed15tmaxplus_corr_pairs_ge095_seed42.csv"
+}

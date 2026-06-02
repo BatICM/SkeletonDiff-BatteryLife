@@ -1,0 +1,6 @@
+﻿run,file,rmse_mean,mae_mean,corr_mean,eol_error_mean,eol_error_std,valid_eol_ratio,group_acc,guidance_scale,ddim_steps,n_runs_max
+diffusion_old_rt82,Output/code2_test_predictions_seed42_n10_rt82.pkl,2.232037229971452,1.4243513183160261,0.9807052558118646,81.95454545454545,68.35567228756,1.0,1.0,0.8,60.0,20.0
+diffusion_fixed15_tmax,Output/code2_test_predictions_seed42_n10_fixed15tmax_rt82.pkl,2.2724541263146834,1.4548263983293013,0.9813641282645139,120.31818181818181,105.2189865184366,1.0,1.0,0.8,60.0,20.0
+diffusion_fixed15_plus_best_gs06,Output/code2_test_predictions_seed42_n10_fixed15tmaxplus_rt82_gs06.pkl,3.3149724765257402,2.2283297154036434,0.981379974972118,135.27272727272728,99.7060141425699,1.0,1.0,0.6,60.0,20.0
+baseline_lstm_fixed15_plus,Output/baseline_lstm_test_predictions_seed42.pkl,2.8597683283415707,1.7314305278387936,0.980136676268144,136.27272727272728,111.69649698185046,1.0,1.0,,,
+baseline_transformer_fixed15_plus,Output/baseline_transformer_test_predictions_seed42.pkl,2.6457608396356758,1.5995171097191898,0.9759027334776792,111.54545454545455,99.98078327755482,1.0,1.0,,,

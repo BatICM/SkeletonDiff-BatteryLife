@@ -1,0 +1,17 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VSCode 编辑器配置
+.vscode/
+
+# 原始数据集 (包含太大的原始序列文件，绝不上传)
+data/
+
+# 操作系统隐藏文件
+.DS_Store
+Thumbs.db
+
+# 忽略所有的中间日志和预测轨迹张量，只上传可视化图表和 CSV/MD 汇总
+results/*.pkl

@@ -1,0 +1,5 @@
+case,g0_worst_rmse,g0_worst_rmse_battery,g0_worst_eol_abs_error,g0_worst_eol_battery,g1_worst_rmse,g1_worst_rmse_battery,g1_worst_eol_abs_error,g1_worst_eol_battery,g2_worst_rmse,g2_worst_rmse_battery,g2_worst_eol_abs_error,g2_worst_eol_battery
+ablogic_twostage,5.4192728996276855,b1c42,223.0,b2c20,7.836272239685059,b3c18,584.0,b3c19,4.739064693450928,b3c17,119.0,b3c45
+abloss_no_shape,4.28391695022583,b1c18,221.0,b2c20,8.154125213623047,b3c19,538.0,b3c19,2.7923662662506104,b3c45,104.0,b3c45
+abloss_no_eolaux,5.89363431930542,b1c38,214.0,b2c20,8.117375373840332,b3c18,626.0,b3c19,4.63884162902832,b3c17,157.0,b3c45
+abloss_no_groupweight,5.340250492095947,b1c42,204.0,b2c20,7.889554023742676,b3c18,584.0,b3c19,3.40124249458313,b3c45,188.0,b3c17
