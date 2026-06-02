@@ -47,3 +47,23 @@ Battery-Degradation-Prediction/
 ├── code/
 │   ├── 01_data_processing.py
 │   └── ...
+```
+## 📊 Results
+
+Tested on a dataset of 124 lithium iron phosphate (LFP) batteries, our generative approach outperforms traditional baselines (such as LSTM and Transformer) in global average indicators including RMSE, MAE, and EOL prediction errors, especially demonstrating superior stability in long-term predictions.
+
+## Citation
+
+[To be added]
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+[To be added]
+
+## Contact
+
+[To be added]
